@@ -15,4 +15,5 @@
 
 #sidenav{
   float: right;
+  flex: 1;
 }

@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Routes, RouterModule } from '@angular/router';
-
+import { DragDropModule } from '@angular/cdk/drag-drop'
 
 const appRoutes:Routes=[
   {path:'' ,component:MissionboardComponent},
@@ -40,6 +40,7 @@ const appRoutes:Routes=[
     MatButtonModule,
     MatToolbarModule,
     MatTabsModule,
+    DragDropModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

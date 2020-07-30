@@ -1,9 +1,7 @@
-<div id="menubar">
-  <mat-toolbar color="primary">
-    <span >EpiC</span>
+  <mat-toolbar color="primary" id="menubar">
+    <span id="logo">EpiC</span>
     <mat-tab-group (selectedTabChange)="navigate($event)">
-      <mat-tab label="לוח משימות" ></mat-tab>
-      <mat-tab label="תמונת מצב ארצית"></mat-tab>
+      <mat-tab label="לוח משימות" ><span> לוח משימות</span> </mat-tab>
+      <mat-tab label="תמונת מצב ארצית"> <span> מצב ארצי</span> </mat-tab>
     </mat-tab-group>
   </mat-toolbar>
-</div>

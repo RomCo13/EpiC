@@ -19,6 +19,5 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/status']);
     else
       this.router.navigate(['/missions']);
-
   }
 }
