@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatTreeModule , MatIconModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar'
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +25,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
