@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router ) { }
   user='שלום אולה'
   ngOnInit() {
   }
 
+  navigate()
+  {
+    if(this.router.routerState.snapshot.url === '/missions' )
+      this.router.navigate(['/status']);
+    else
+      this.router.navigate(['/missions']);
+
+  }
 }
