@@ -5,7 +5,6 @@ import {SidenavComponent} from './sidenav/sidenav.component';
 import {AppComponent} from './app.component';
 import {MissionboardComponent} from './missionboard/missionboard.component';
 import {CurrentstatusComponent} from './currentstatus/currentstatus.component';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatTreeModule, MatIconModule} from '@angular/material';
@@ -31,7 +30,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     MissionboardComponent,
     CurrentstatusComponent,
-    GraphComponent
+    GraphComponent,
     MapComponent
   ],
   imports: [
