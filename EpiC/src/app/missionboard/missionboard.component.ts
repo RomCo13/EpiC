@@ -8,6 +8,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class MissionboardComponent implements OnInit {
 
+  teamName="צוות מנצח";
+
   constructor() { }
 
   alltasks = [

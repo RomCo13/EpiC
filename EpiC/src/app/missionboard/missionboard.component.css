@@ -1,9 +1,10 @@
 .table-container {
-  width: 25%;
+  width: 14%;
   max-width: 100%;
   margin: 0 25px 25px 0;
   display: inline-block;
   vertical-align: top;
+
 }
 
 .list {
@@ -69,4 +70,14 @@
 
 #graph{
   height: 200px;
+}
+
+#search{
+  direction: rtl;
+  margin-right: 3vw;
+}
+
+#message{
+  direction:  rtl;
+  margin-right: 3.5%;
 }
