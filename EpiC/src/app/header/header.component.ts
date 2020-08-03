@@ -9,7 +9,6 @@ import { Router, RouterStateSnapshot } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(private router:Router ) { }
-  user='שלום אולה'
   ngOnInit() {
   }
 
