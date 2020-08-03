@@ -1,20 +1,20 @@
-<div>
+<div class="headGraph">
 <app-graph></app-graph>
+<app-team-stats></app-team-stats>
 </div>
 
-<div id="message">
-  לוח משימות של : {{teamName}}
+<div class="wrapper">
+  <div id="message">
+    לוח משימות של : {{teamName}}
+  </div>
+  <div id="search">
+    <input type="text" value="חיפוש">
+    <button mat-icon-button aria-label="Example icon button with a search icon">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
 </div>
-<div>
 
-</div>
-
-<div id="search">
-  <input type="text" value="חיפוש">
-  <button mat-icon-button aria-label="Example icon button with a search icon">
-    <mat-icon>search</mat-icon>
-  </button>
-</div>
 
 <div cdkDropListGroup id="tasks" >
 

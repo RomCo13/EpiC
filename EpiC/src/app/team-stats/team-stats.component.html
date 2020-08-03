@@ -1,0 +1,27 @@
+<div class="warpper">
+<div class="text">
+  חקירות שבוצעו בצוות השבוע
+</div>
+<div class="currentStat">
+  <span >{{invsAmount}}</span>
+</div>
+</div>
+
+<div class="chart">
+  <div class="title">
+    סטטוס התקדמות הצוותים במחקר
+  </div>
+  <div class="progress" *ngFor="let invs of teamProgress">
+    <span class="title">
+      {{invs.name}}
+    </span>
+    <span class="progression">
+    {{invs.done}} מתוך {{invs.total}}
+    </span>
+    <mat-progress-bar mode="determinate"  value="{{invs.done/invs.total*100}}">{{invs.done}} מתוך {{invs.total}}</mat-progress-bar>
+  </div>
+</div>
+
+
+
+

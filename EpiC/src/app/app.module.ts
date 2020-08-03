@@ -9,14 +9,15 @@ import { CurrentstatusComponent } from './currentstatus/currentstatus.component'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
-import { MatTreeModule , MatIconModule } from '@angular/material';
+import { MatTreeModule , MatIconModule ,MatProgressBarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Routes, RouterModule } from '@angular/router';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { GraphComponent } from './graph/graph.component'
-import { MapComponent } from './map/map.component'
+import { MapComponent } from './map/map.component';
+import { TeamStatsComponent } from './team-stats/team-stats.component'
 
 const appRoutes:Routes=[
   {path:'', redirectTo: '/missions', pathMatch: 'full'},
@@ -32,8 +33,9 @@ const appRoutes:Routes=[
     HeaderComponent,
     MissionboardComponent,
     CurrentstatusComponent,
-    GraphComponent
-    MapComponent
+    GraphComponent,
+    MapComponent,
+    TeamStatsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ const appRoutes:Routes=[
     MatToolbarModule,
     MatTabsModule,
     DragDropModule,
+    MatProgressBarModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

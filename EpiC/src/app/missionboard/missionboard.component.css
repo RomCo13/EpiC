@@ -80,3 +80,8 @@
   direction:  rtl;
   margin-right: 3.5%;
 }
+
+.headGraph{
+display: inline-block;
+width: 100%;
+}
