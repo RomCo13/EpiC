@@ -1,0 +1,12 @@
+#content{
+  width: 100%;
+  padding: 16px 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  float: right;
+  margin-right: 3%;
+}
+
+#warper{
+  display: flex;
+}

@@ -1,0 +1,84 @@
+<div id="message">
+  לוח משימות של : {{teamName}}
+</div>
+<div>
+
+</div>
+
+<div id="search">
+  <input type="text" value="חיפוש">
+  <button mat-icon-button aria-label="Example icon button with a search icon">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+
+<div cdkDropListGroup id="tasks" >
+
+  <div class="table-container">
+    <h2 id="title">כל המשימות</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="alltasks"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of alltasks;" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <h2 id="title">בתהליך</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="inProgress"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of inProgress" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <h2 id="title">נחקר וטרם הוקלד </h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="beforeTyping"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of beforeTyping" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <h2 id="title">הוקלד</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="afterTyping"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of afterTyping" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <h2 id="title">פיידבק</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="feedback"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of feedback" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <h2 id="title">הסתיים</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="finished"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of finished" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+
+</div>
