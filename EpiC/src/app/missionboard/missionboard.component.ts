@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
+
 @Component({
   selector: 'app-missionboard',
   templateUrl: './missionboard.component.html',
   styleUrls: ['./missionboard.component.css']
 })
+
 export class MissionboardComponent implements OnInit {
 
   teamName="צוות מנצח";
@@ -51,7 +53,6 @@ export class MissionboardComponent implements OnInit {
                         event.previousIndex,
                         event.currentIndex);
     }
-    console.log(this.alltasks)
   }
 
   ngOnInit() {
