@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Routes, RouterModule } from '@angular/router';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { GraphComponent } from './graph/graph.component'
 import { MapComponent } from './map/map.component'
 
 const appRoutes:Routes=[
@@ -31,6 +32,7 @@ const appRoutes:Routes=[
     HeaderComponent,
     MissionboardComponent,
     CurrentstatusComponent,
+    GraphComponent
     MapComponent
   ],
   imports: [
