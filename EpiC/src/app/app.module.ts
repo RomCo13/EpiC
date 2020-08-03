@@ -14,7 +14,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {Routes, RouterModule} from '@angular/router';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MapComponent} from './map/map.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
+import {GraphComponent} from './graph/graph.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/missions', pathMatch: 'full'},
