@@ -14,12 +14,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Routes, RouterModule } from '@angular/router';
-import { DragDropModule } from '@angular/cdk/drag-drop'
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MapComponent } from './map/map.component'
 
 const appRoutes:Routes=[
-  {path:'' ,component:MissionboardComponent},
-  {path:'missions' ,component:MissionboardComponent},
-  {path:'status' ,component:CurrentstatusComponent}
+  {path:'', redirectTo: '/missions', pathMatch: 'full'},
+  {path:'missions' , component:MissionboardComponent},
+  {path:'status' , component:CurrentstatusComponent}
 
 ];
 
@@ -29,7 +30,8 @@ const appRoutes:Routes=[
     SidenavComponent,
     HeaderComponent,
     MissionboardComponent,
-    CurrentstatusComponent
+    CurrentstatusComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
