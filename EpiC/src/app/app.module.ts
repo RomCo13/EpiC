@@ -16,11 +16,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { Routes, RouterModule } from '@angular/router';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { GraphComponent } from './graph/graph.component'
+import { MapComponent } from './map/map.component'
 
 const appRoutes:Routes=[
-  {path:'' ,component:MissionboardComponent},
-  {path:'missions' ,component:MissionboardComponent},
-  {path:'status' ,component:CurrentstatusComponent}
+  {path:'', redirectTo: '/missions', pathMatch: 'full'},
+  {path:'missions' , component:MissionboardComponent},
+  {path:'status' , component:CurrentstatusComponent}
 
 ];
 
@@ -32,6 +33,7 @@ const appRoutes:Routes=[
     MissionboardComponent,
     CurrentstatusComponent,
     GraphComponent
+    MapComponent
   ],
   imports: [
     BrowserModule,
