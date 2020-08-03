@@ -1,0 +1,11 @@
+.graph{
+  float: right;
+  direction: rtl;
+  width:30% ;
+  height: 50%;
+}
+
+#linechart{
+  height: 50%;
+
+}
