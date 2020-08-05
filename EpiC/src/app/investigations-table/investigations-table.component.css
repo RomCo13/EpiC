@@ -1,6 +1,7 @@
 :host {
     width: 35%;
     height: 100%;
+    position: relative;
 }
 
 div.container {
@@ -31,6 +32,7 @@ div.filter-button {
     border-style: solid;
     float: left;
     padding: 4px;
+    cursor: pointer;
 }
 
 span.filter-icon {
@@ -60,8 +62,8 @@ div.table {
 }
 
 div.teams {
-    width: 78%;
-    height: 1000px;
+    width: 75%;
+    height: 600px;
     display: inline-block;
     padding: 5px;
 }
@@ -107,4 +109,10 @@ div.team-break-button {
     padding: 4px;
     margin: 4px;
     text-align: center;
+    cursor: pointer;
 }
+
+.mat-form-field {
+    margin-right: 4px;
+}
+  

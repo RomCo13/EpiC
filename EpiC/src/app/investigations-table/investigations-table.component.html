@@ -20,7 +20,29 @@
           <div class="team-break-button">פרק קבוצה</div>
           <span>קבוצה שהתאמתה על מקום</span>
         </div>
-        <li></li>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <li>
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+              <button mat-icon-button disabled></button>
+              <mat-checkbox class="checklist-leaf-node"
+                            [checked]="checklistSelection.isSelected(node)"
+                            (change)="todoLeafItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+            </mat-tree-node>
+          </li>
+          <li>
+            <mat-tree-node *matTreeNodeDef="let node; when: hasChild">
+              <button mat-icon-button matTreeNodeToggle
+                      [attr.aria-label]="'toggle ' + node.filename">
+                <mat-icon class="mat-icon-rtl-mirror">
+                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_left'}}
+                </mat-icon>
+              </button>
+              <mat-checkbox [checked]="descendantsAllSelected(node)"
+                            [indeterminate]="descendantsPartiallySelected(node)"
+                            (change)="todoItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+            </mat-tree-node>
+          </li>
+        </mat-tree>
       </ul>
     </div>
 
