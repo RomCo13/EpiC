@@ -7,7 +7,7 @@ import {MissionboardComponent} from './missionboard/missionboard.component';
 import {CurrentstatusComponent} from './currentstatus/currentstatus.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
-import {MatTreeModule, MatIconModule} from '@angular/material';
+import {MatTreeModule, MatIconModule, MatProgressBarModule, MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -16,17 +16,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MapComponent} from './map/map.component';
 import {HttpClientModule} from '@angular/common/http';
 import {GraphComponent} from './graph/graph.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from '@angular/material/input';
-import { MatTreeModule , MatIconModule ,MatProgressBarModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTabsModule } from '@angular/material/tabs';
-import { Routes, RouterModule } from '@angular/router';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { GraphComponent } from './graph/graph.component'
-import { MapComponent } from './map/map.component';
-import { TeamStatsComponent } from './team-stats/team-stats.component'
+import { TeamStatsComponent } from './team-stats/team-stats.component';
+import { InvestigationsTableComponent } from './investigations-table/investigations-table.component'
 
 const appRoutes:Routes=[
   {path:'', redirectTo: '/missions', pathMatch: 'full'},
@@ -45,7 +36,8 @@ const appRoutes:Routes=[
     CurrentstatusComponent,
     GraphComponent,
     MapComponent,
-    TeamStatsComponent
+    TeamStatsComponent,
+    InvestigationsTableComponent
   ],
   imports: [
     HttpClientModule,
@@ -58,6 +50,7 @@ const appRoutes:Routes=[
     MatToolbarModule,
     MatTabsModule,
     DragDropModule,
+    MatCheckboxModule,
     MatProgressBarModule,
     RouterModule.forRoot(appRoutes),
   ],

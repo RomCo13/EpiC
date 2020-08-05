@@ -1,0 +1,118 @@
+:host {
+    width: 35%;
+    height: 100%;
+    position: relative;
+}
+
+div.container {
+    width: 35%;
+    height: 100%;
+    right: 0px;
+    border-color: black;
+    direction: rtl;
+    float: right;
+}
+
+div.header {
+    width: 100%;
+    height: 5%;
+}
+
+span.title {
+    padding: 3px;
+}
+
+div.filter-button {
+    display: flex;
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    border-radius: 20px;
+    border-width: thin;
+    border-style: solid;
+    float: left;
+    padding: 4px;
+    cursor: pointer;
+}
+
+span.filter-icon {
+    background-repeat: round;
+    background-image: url(./icons/icons8-filter-32.png);
+    width: 50%;
+    height: 100%;
+}
+
+span.slider-icon {
+    background-repeat: round;
+    background-image: url(./icons/icons8-slider-32.png);
+    width: 50%;
+    height: 100%;
+}
+
+div.teams-header {
+    display: flow-root;
+}
+
+div.table {
+    width: 100%;
+    height: 95%;
+    background-color: #e8e8e8;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div.teams {
+    width: 75%;
+    height: 600px;
+    display: inline-block;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #d2d2d2;
+    padding: 0px;
+}
+
+li {
+    background-color: white;
+    height: 50px;
+}
+
+div.boxes {
+    width: 20%;
+    height: 60%;
+    float: left;
+}
+
+div.filter-box {
+    padding: 5px;
+    width: 100%;
+    height: 250px;
+    border-width: thin;
+    border-style: solid;
+}
+
+div.team-title {
+    display: flow-root;
+}
+
+div.team-break-button {
+    display: flex;
+    width: 70px;
+    height: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border-width: thin;
+    border-style: solid;
+    float: left;
+    padding: 4px;
+    margin: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mat-form-field {
+    margin-right: 4px;
+}
+  

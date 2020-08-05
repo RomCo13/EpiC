@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="header">
+    <span class="title" style="display: block;">חקירות חדשות טרם הוקצו</span>
+    <span class="title">1,412 מקרים חדשים |</span>
+    <span class="title">50 קבוצות</span>
+  </div>
+
+  <div class="table">
+
+    <div class="teams">
+      <div class="teams-header">
+        <div class="filter-button">
+          <span class="filter-icon"></span>
+          <span class="slider-icon"></span>
+        </div>
+      </div>
+
+      <ul class="team">
+        <div class="team-title">
+          <div class="team-break-button">פרק קבוצה</div>
+          <span>קבוצה שהתאמתה על מקום</span>
+        </div>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <li>
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+              <button mat-icon-button disabled></button>
+              <mat-checkbox class="checklist-leaf-node"
+                            [checked]="checklistSelection.isSelected(node)"
+                            (change)="todoLeafItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+            </mat-tree-node>
+          </li>
+          <li>
+            <mat-tree-node *matTreeNodeDef="let node; when: hasChild">
+              <button mat-icon-button matTreeNodeToggle
+                      [attr.aria-label]="'toggle ' + node.filename">
+                <mat-icon class="mat-icon-rtl-mirror">
+                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_left'}}
+                </mat-icon>
+              </button>
+              <mat-checkbox [checked]="descendantsAllSelected(node)"
+                            [indeterminate]="descendantsPartiallySelected(node)"
+                            (change)="todoItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+            </mat-tree-node>
+          </li>
+        </mat-tree>
+      </ul>
+    </div>
+
+    <div class="boxes">
+      <div class="filter-box">סינון מהיר</div>
+      <div class="filter-box">מיון מהיר</div>
+    </div>
+
+  </div>
+</div>
